@@ -11,11 +11,14 @@ def listaint(n):
     return lista1
 print(listaint(a))
 
-"""def listafloat(c):
+def listafloat(c):
     lista1=[]
     for i in range(c):
-        b=float(input("Dati elementele din lista float="))
-        lista1.append(b)
+        b=eval(input("Dati elementele din lista float="))
+        if type(b)==float:
+            lista1.append(b)
+        elif type(b)!=float:
+            print("Nu ati dat un numar real")
     return lista1
 
 print(listafloat(a))
