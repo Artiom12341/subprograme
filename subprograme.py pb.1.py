@@ -33,14 +33,16 @@ suma()
 
 #problema cu factorial
 print("n>m")
-n=input("n=")
-m=input("m=")
-def factorial(x):
-    fact=1
-    for i in range(1,x+1):
-        fact*=i
-    return fact
-
+n=int(input("n="))
+m=int(input("m="))
+if n>m:
+    def factorial(x):
+        fact=1
+        for i in range(1,x+1):
+            fact*=i
+        return fact
+else:
+    print("Respecta conditia")
 c=factorial(n)/(factorial(m)*(factorial(n-m)))
 print(c)
 
