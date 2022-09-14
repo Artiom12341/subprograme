@@ -59,7 +59,7 @@ def adunare():
     elif x=='p' or x=='produs':
         p=((a*c)/(b*d))
         return p
-print(adunare())"""
+print(adunare())
 
 
 
