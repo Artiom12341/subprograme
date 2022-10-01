@@ -8,23 +8,24 @@ a7=int(input("a7="))
 a8=int(input("a8="))
 a9=int(input("a9="))
 a10=int(input("a10="))
-def max():
-    if x>y:
-        x=max
+def maxim(x,y):
+    
+    if x>=y:
+        m=x
     elif y>x:
-        y=max
+        m=y
     else:
-        x=max
-    return max
+        m=x
+    return int(m)
 
-def min():
-    if x<y:
-        x=min
-    elif y<x:
-        y=min
+def minim(s,d):
+    if s<d:
+        mn=s
+    elif d<s:
+        mn=d
     else:
-        x=min
-    return min
+        mn=s
+    return int(mn)
 
-print("S=",(max(min(a1,a2),max(a3,a4))+min(max(a5,a6),min(a7,a8))))
-print("T=",(min(a1,a2)+min(a3,a4)+min(a5,a6)+min(a7,a8)+min(a9,a10)+max(a1,a2)+max(a3,a4)+max(a5,a6)+max(a7,a8)+max(a9,a10)))
+print("S=",(maxim(minim(a1,a2),maxim(a3,a4))+minim(maxim(a5,a6),minim(a7,a8))))
+print("T=",(minim(a1,a2)+minim(a3,a4)+minim(a5,a6)+minim(a7,a8)+minim(a9,a10)+maxim(a1,a2)+maxim(a3,a4)+maxim(a5,a6)+maxim(a7,a8)+maxim(a9,a10)))
