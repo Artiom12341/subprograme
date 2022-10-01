@@ -5,6 +5,8 @@ import math
 def mediane(a,b,c):
     if (a+b>=c) and (c+b>=a) and (a+c>=b):
         m=0.5*math.sqrt((2*(b**2))+(2*(c**2))-(a**2))
+    else:
+        m="Laturile nu formeaza un triunghi"
     return m
 
 print("lungimea medianelor-",mediane(a,b,c))
