@@ -3,9 +3,9 @@ for h in range(1):
     n=randint(2,999)
 for t in range(1):
     b=randint(2,9)
-print("n=",n,"b=",b)
-#n=int(input("n="))
-#b=int(input("b="))
+for k in range(1):
+    a=randint(2,999)
+print("n=",n,"b=",b,"a=",a)
 def baza(x,y):
     for i in [int(j) for j in str(x)]:
         if i<y:
@@ -16,8 +16,8 @@ def baza(x,y):
     return m
     
 print("Numarul",n,baza(n,b),"este in baza",b)
-if baza(n,b)=="":
-    n1=int(input("n1="))
+print("Numarul",a,baza(a,b),"este in baza",b)
+if ((baza(n,b)=="") and (baza(a,b)=="")):
     def transb10(x,y):
         s=0
         g=(len(str(x))-1)
@@ -39,9 +39,12 @@ if baza(n,b)=="":
             l+=str(x%y)
         return l[::-1]
 
-    print("Suma numerelor date=",b10trans(transb10(n,b)+transb10(n1,b),b))
-    print("Diferenta numerelor date=",b10trans(transb10(n,b)-transb10(n1,b),b))
-    print("Produsul numerelor date=",b10trans(transb10(n,b)*transb10(n1,b),b))
+    print("Suma numerelor date=",b10trans(transb10(n,b)+transb10(a,b),b))
+    if a>n:
+        print("Modulul diferentei numerelor date=",b10trans(transb10(a,b)-transb10(n,b),b))
+    elif n>a:
+        print("Modulul diferentei numerelor date=",b10trans(transb10(n,b)-transb10(a,b),b))
+    print("Produsul numerelor date=",b10trans(transb10(n,b)*transb10(a,b),b))
 else:
     print("Numerele propuse nu respecta conditia, mai incerca!")
 
